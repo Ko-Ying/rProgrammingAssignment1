@@ -1,9 +1,4 @@
 complete <- function(directory, id = 1:332) {
-  ## 'directory' is a character vector of length 1 indicating
-  ## the location of the CSV files
-  
-  # Set the working directory to the folder containing the data
-  #setwd(directory)
   
   # Get the list of files
   filesList <- list.files(directory)
@@ -17,6 +12,7 @@ complete <- function(directory, id = 1:332) {
   # Loop through the files
   for (file in selectedFiles){
     
+    # Create the file name string
     fileName <- paste(directory, "/", file, sep="")
     
     # Load in the data from the file

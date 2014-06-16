@@ -21,8 +21,10 @@ pollutantmean <- function(directory, pollutant, id = 1:332) {
     #construct the filename 
     fileName <- paste(directory, "/", file, sep="")
     
+    # Load the data from the file
     dataTemp <- read.csv(fileName)
     
+    # Append the data to the end of the data frame
     data <- rbind(data, dataTemp)
     
     
